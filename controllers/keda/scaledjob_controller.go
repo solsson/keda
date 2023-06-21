@@ -107,8 +107,6 @@ func (r *ScaledJobReconciler) Reconcile(ctx context.Context, req ctrl.Request) (
 		return ctrl.Result{}, err
 	}
 
-	reqLogger.Info("Reconciling ScaledJob")
-
 	// Check if the ScaledJob instance is marked to be deleted, which is
 	// indicated by the deletion timestamp being set.
 	if scaledJob.GetDeletionTimestamp() != nil {
